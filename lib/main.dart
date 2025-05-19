@@ -22,11 +22,6 @@ void main() async {
       child: MyApp(),
     ),
   );
-
-  // OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
-  // OneSignal.initialize("YOUR_APP_ID");
-
-  // OneSignal.Notifications.requestPermission(false);
 }
 
 class MyApp extends StatelessWidget {
@@ -44,7 +39,8 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: RoutesName.splashScreen,
+      initialRoute: RoutesName.user,
+      // home: TestingScreen(),
       getPages: RoutesApp.routes,
       initialBinding: MainScreenBinding(),
     );

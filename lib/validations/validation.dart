@@ -19,7 +19,7 @@ class _TestValidationState extends State<TestValidation> {
       );
     } else {
       if (await Vibration.hasVibrator() ?? false) {
-        Vibration.vibrate(duration: 500); 
+        Vibration.vibrate(duration: 500);
       }
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please enter your name')),

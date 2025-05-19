@@ -13,3 +13,5 @@ class MainScreenBinding extends Bindings {
     Get.put(GameController(), permanent: true);
   }
 }
+
+

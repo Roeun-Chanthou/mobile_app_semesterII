@@ -5,13 +5,15 @@ import 'package:flutter_2/pages/game_screen/games/game_binding.dart';
 import 'package:flutter_2/pages/game_screen/games/game_view.dart';
 import 'package:flutter_2/pages/main_screen/main_screen_binding.dart';
 import 'package:flutter_2/pages/main_screen/main_screen_view.dart';
-import 'package:flutter_2/pages/notification/notification_binding.dart';
-import 'package:flutter_2/pages/notification/notification_view.dart';
 import 'package:flutter_2/pages/people/user_binding.dart';
 import 'package:flutter_2/pages/people/user_view.dart';
 import 'package:flutter_2/pages/products/product_binding.dart';
 import 'package:flutter_2/pages/products/product_view.dart';
 import 'package:flutter_2/pages/splash/splash_view.dart';
+import 'package:flutter_2/restful_api/newuser/newuser_binding.dart';
+import 'package:flutter_2/restful_api/newuser/newuser_view.dart';
+import 'package:flutter_2/restful_api/user/user_binding.dart';
+import 'package:flutter_2/restful_api/user/user_view.dart';
 import 'package:flutter_2/routes/routes_name.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
@@ -51,9 +53,14 @@ class RoutesApp {
       binding: GameDetailBinding(),
     ),
     GetPage(
-      name: RoutesName.notification,
-      page: () => NotificationView(),
-      binding: NotificationBinding(),
+      name: RoutesName.user,
+      page: () => UsersView(),
+      binding: UsersBinding(),
+    ),
+    GetPage(
+      name: RoutesName.newuser,
+      page: () => NewUserView(),
+      binding: NewUserBinding(),
     ),
   ];
 }
